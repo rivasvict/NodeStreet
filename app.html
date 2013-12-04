@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+		<script src="javascripts/calculo.js"></script>
+	</head>
+	<body>
+		<div id="input" ng-controller="calculoJS">
+			<span>
+				Inserte el monto
+			</span>
+				<select ng-model="option">
+					<option id="1" value="Base">
+						Base
+					</option>
+					<option id="2" value="Total">
+						Total
+					</option>
+				</select>
+			<form ng-submit="testing()">
+				<input type="text" placeholder="Inserte valor aqui" ng-model="value">
+				<input type="submit" value="Calcular monto a pagar">
+			</form>
+			El monto a pagar es: {{ch}}
+		</div>
+	</body>
+</html>
